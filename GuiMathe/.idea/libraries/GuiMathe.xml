@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="GuiMathe">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/GuiMathe_jar/GuiMathe.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,6 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+
 class Heron {
+
+    // intellij hat rumgeheult, darum java.lang.String
     public static java.lang.String heron(int iterationen, double naeherungswert, double zahl) {
         StringBuilder returnString = new StringBuilder();
         for (int i = 0; i < iterationen; i++) {
@@ -12,9 +15,9 @@ class Heron {
 }
 public class HeronFrame extends JFrame {
 
-    private final JTextField inputField1;
-    private final JTextField inputField2;
-    private final JTextField inputField3;
+    private final JTextField eingabe1;
+    private final JTextField eingabe2;
+    private final JTextField eingabe3;
     public HeronFrame() {
         super("Heron-Verfahren");
 
@@ -30,20 +33,20 @@ public class HeronFrame extends JFrame {
         JLabel titleLabel = new JLabel("");
         inputPanel.add(titleLabel);
 
-        JLabel inputField1Label = new JLabel("Zahl der Iterationen");
-        inputPanel.add(inputField1Label);
-        inputField1 = new JTextField(20);
-        inputPanel.add(inputField1);
+        JLabel eingabe1Label = new JLabel("Zahl der Iterationen");
+        inputPanel.add(eingabe1Label);
+        eingabe1 = new JTextField(20);
+        inputPanel.add(eingabe1);
 
-        JLabel inputField2Label = new JLabel("Für welche Zahl soll die Wurzel bestimmt werden?");
-        inputPanel.add(inputField2Label);
-        inputField2 = new JTextField(20);
-        inputPanel.add(inputField2);
+        JLabel eingabe2Label = new JLabel("Für welche Zahl soll die Wurzel bestimmt werden?");
+        inputPanel.add(eingabe2Label);
+        eingabe2 = new JTextField(20);
+        inputPanel.add(eingabe2);
 
-        JLabel inputField3Label = new JLabel("Gebe einen Näherungswert an");
-        inputPanel.add(inputField3Label);
-        inputField3 = new JTextField(20);
-        inputPanel.add(inputField3);
+        JLabel eingabe3Label = new JLabel("Gebe einen Näherungswert an");
+        inputPanel.add(eingabe3Label);
+        eingabe3 = new JTextField(20);
+        inputPanel.add(eingabe3);
 
         JButton submitButton = new JButton("Eingabe");
         submitButton.addActionListener(event -> {
@@ -51,9 +54,9 @@ public class HeronFrame extends JFrame {
             mainframe.setVisible(true);
             dispose();
 
-            int iterations = Integer.parseInt(inputField1.getText());
-            double num = Float.parseFloat(inputField2.getText());
-            double naeherung = Float.parseFloat(inputField3.getText());
+            int iterations = Integer.parseInt(eingabe1.getText());
+            double num = Float.parseFloat(eingabe2.getText());
+            double naeherung = Float.parseFloat(eingabe3.getText());
 
 
             String ausgabe = Heron.heron(iterations, naeherung, num);
