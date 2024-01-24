@@ -19,7 +19,12 @@ class Falsi {
     // intellij hör auf rumzuheulen
     public static java.lang.String falsi(int iterationen, double naeherungswert) {
         StringBuilder returnString = new StringBuilder();
+
         for (int i = 0; i < iterationen; i++) {
+            if (funktionswert(1)-funktionswert(naeherungswert) == 0) {
+                returnString.append("Nullstelle gefunden: ").append(naeherungswert).append("\n");
+                break;
+            }
             naeherungswert = naeherungswert-funktionswert(naeherungswert)*((1-naeherungswert)/(funktionswert(1)-funktionswert(naeherungswert)));
             returnString.append(naeherungswert).append("\n");
         }

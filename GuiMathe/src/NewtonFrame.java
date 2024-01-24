@@ -22,6 +22,10 @@ class Newton {
     public static String newton(int iterationen, double naeherungswert) {
         StringBuilder returnString = new StringBuilder();
         for (int i = 0; i < iterationen; i++) {
+            if (ableitungswert(naeherungswert) == 0) {
+                returnString.append("Nullstelle gefunden: ").append(naeherungswert).append("\n");
+                break;
+            }
             naeherungswert = naeherungswert-(funktionswert(naeherungswert)/(ableitungswert(naeherungswert)));
             returnString.append(naeherungswert).append("\n");
         }
