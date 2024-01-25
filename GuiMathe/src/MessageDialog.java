@@ -20,3 +20,4 @@ public class MessageDialog extends JDialog {
         setVisible(true);
     }
 }
+

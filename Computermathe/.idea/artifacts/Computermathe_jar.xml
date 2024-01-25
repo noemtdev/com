@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Computermathe:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Computermathe_jar</output-path>
+    <root id="archive" name="Computermathe.jar">
+      <element id="module-output" name="Computermathe" />
+    </root>
+  </artifact>
+</component>
